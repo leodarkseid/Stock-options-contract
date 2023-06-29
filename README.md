@@ -2,6 +2,7 @@
 A simple smart contract that allows non ERC20 based organisations give out, distribute and  vest Stock Options
 
 
+
 # Employee Stock Option Plan
 
 This smart contract is an Employee Stock Option Plan implemented in Solidity. It allows for the management and granting of stock options to employees. The contract is designed to be owned by an address and provides various functions for adding employees, granting stock options, setting vesting schedules, and managing vested and exercised options.
