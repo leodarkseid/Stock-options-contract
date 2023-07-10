@@ -54,7 +54,7 @@ contract EmployeeStockOptionPlan is Ownable, ReentrancyGuard {
         require(_vestingSchedule > block.timestamp, "vesting schedule must be in the future");
         require(employee[_employeeAddress].stockOptions > 0,"Employee doesn't exist");
 
-        if (employee[_employeeAddress].stockOptions > 0) {_vest(_employeeAddress);}
+        if (employee[_employeeAddress].stockOptions > 0 && block.timestamp > employee[_employeeAddress].vestingSchedule) {_vest(_employeeAddress);}
         employee[_employeeAddress].vestingSchedule = _vestingSchedule;
         }
 
